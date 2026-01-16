@@ -1,0 +1,806 @@
+@prefix : <http://example.org/turing#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology ;
+    rdfs:label "Ontologia Alan Turing - Alta Qualidade"@pt ;
+    rdfs:comment "Ontologia otimizada sobre Alan Turing com hierarquia profunda e alta riqueza semântica"@pt .
+
+:AlanTuring a :CientistaDaComputacao,
+        :Criptografo,
+        :Matematico ;
+    rdfs:label "Alan Mathison Turing"@pt ;
+    :biografia "Pai da computação moderna e herói da Segunda Guerra Mundial" ;
+    :contribuiuPara :InteligenciaArtificial ;
+    :dataMorte "1954-06-07"^^xsd:date ;
+    :dataNascimento "1912-06-23"^^xsd:date ;
+    :desenvolveu :TeoriaComputabilidade ;
+    :doutoradoEm :UniversidadePrinceton ;
+    :especializadoEm :CienciaComputacao,
+        :Criptografia ;
+    :estudouEm :UniversidadeCambridge ;
+    :inventou :Bombe,
+        :MaquinaTuring ;
+    :morreuEm :ReinoUnido ;
+    :nacionalidade "Britânico" ;
+    :nasceuEm :Londres ;
+    :nomeCompleto "Alan Mathison Turing" ;
+    :participouDe :SegundaGuerraMundial ;
+    :primeiroNome "Alan" ;
+    :profissao "Matemático, Criptanalista, Cientista da Computação" ;
+    :propôs :TesteTuring ;
+    :publicou :ArtigoComputingMachinery ;
+    :sobrenome "Turing" ;
+    :trabalhouEm :BletchleyPark,
+        :GCCS .
+
+:Empresa a owl:Class ;
+    rdfs:label "Empresa"@pt ;
+    rdfs:comment "Organização comercial"@pt ;
+    rdfs:subClassOf :Organizacao .
+
+:Enigma a :DispositivoCriptografico ;
+    rdfs:label "Enigma"@pt ;
+    :nomeMaquina "Máquina Enigma" .
+
+:Escola a owl:Class ;
+    rdfs:label "Escola"@pt ;
+    rdfs:comment "Instituição de ensino básico ou médio"@pt ;
+    rdfs:subClassOf :InstituicaoEnsino .
+
+:EventoCientifico a owl:Class ;
+    rdfs:label "Evento Científico"@pt ;
+    rdfs:comment "Acontecimento científico relevante"@pt ;
+    rdfs:subClassOf :Evento .
+
+:Fisico a owl:Class ;
+    rdfs:label "Físico"@pt ;
+    rdfs:comment "Cientista especializado em física"@pt ;
+    rdfs:subClassOf :Cientista .
+
+:MatemaaticoAplicado a owl:Class ;
+    rdfs:label "Matemático Aplicado"@pt ;
+    rdfs:comment "Matemático focado em aplicações"@pt ;
+    rdfs:subClassOf :Matematico .
+
+:MatematicoPuro a owl:Class ;
+    rdfs:label "Matemático Puro"@pt ;
+    rdfs:comment "Matemático focado em teoria pura"@pt ;
+    rdfs:subClassOf :Matematico .
+
+:Militar a owl:Class ;
+    rdfs:label "Militar"@pt ;
+    rdfs:comment "Membro das forças armadas"@pt ;
+    rdfs:subClassOf :Pessoa .
+
+:Politico a owl:Class ;
+    rdfs:label "Político"@pt ;
+    rdfs:comment "Pessoa envolvida em política"@pt ;
+    rdfs:subClassOf :Pessoa .
+
+:altitude a owl:DatatypeProperty ;
+    rdfs:label "altitude"@pt ;
+    rdfs:comment "Altitude em metros"@pt ;
+    rdfs:domain :Lugar ;
+    rdfs:range xsd:decimal .
+
+:altura a owl:DatatypeProperty ;
+    rdfs:label "altura"@pt ;
+    rdfs:comment "Altura em metros"@pt ;
+    rdfs:domain :Maquina ;
+    rdfs:range xsd:decimal .
+
+:anoConstrucao a owl:DatatypeProperty ;
+    rdfs:label "anoConstrucao"@pt ;
+    rdfs:comment "Ano de construção"@pt ;
+    rdfs:domain :Maquina ;
+    rdfs:range xsd:gYear .
+
+:anoFim a owl:DatatypeProperty ;
+    rdfs:label "anoFim"@pt ;
+    rdfs:comment "Ano de fim"@pt ;
+    rdfs:domain :Periodo ;
+    rdfs:range xsd:gYear .
+
+:anoInicio a owl:DatatypeProperty ;
+    rdfs:label "anoInicio"@pt ;
+    rdfs:comment "Ano de início"@pt ;
+    rdfs:domain :Periodo ;
+    rdfs:range xsd:gYear .
+
+:antes a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "antes"@pt ;
+    rdfs:comment "Indica precedência temporal"@pt ;
+    rdfs:domain :Temporal ;
+    rdfs:range :Temporal .
+
+:area a owl:DatatypeProperty ;
+    rdfs:label "area"@pt ;
+    rdfs:comment "Área em km²"@pt ;
+    rdfs:domain :Lugar ;
+    rdfs:range xsd:decimal .
+
+:baseadaEm a owl:ObjectProperty ;
+    rdfs:label "baseadaEm"@pt ;
+    rdfs:comment "Indica base teórica"@pt ;
+    rdfs:domain :Maquina ;
+    rdfs:range :Teoria .
+
+:biografia a owl:DatatypeProperty ;
+    rdfs:label "biografia"@pt ;
+    rdfs:comment "Biografia resumida"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:string .
+
+:casouCom a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "casouCom"@pt ;
+    rdfs:comment "Indica casamento"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Pessoa .
+
+:colaborouCom a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "colaborouCom"@pt ;
+    rdfs:comment "Indica colaboração entre pessoas"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Pessoa .
+
+:conheceu a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "conheceu"@pt ;
+    rdfs:comment "Indica que conheceu outra pessoa"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Pessoa .
+
+:contribuiuPara a owl:ObjectProperty ;
+    rdfs:label "contribuiuPara"@pt ;
+    rdfs:comment "Indica contribuição"@pt ;
+    rdfs:domain :Cientista ;
+    rdfs:range :AreaConhecimento .
+
+:dataFim a owl:DatatypeProperty ;
+    rdfs:label "dataFim"@pt ;
+    rdfs:comment "Data de fim"@pt ;
+    rdfs:domain :Evento ;
+    rdfs:range xsd:date .
+
+:dataFundacao a owl:DatatypeProperty ;
+    rdfs:label "dataFundacao"@pt ;
+    rdfs:comment "Data de fundação"@pt ;
+    rdfs:domain :Organizacao ;
+    rdfs:range xsd:date .
+
+:dataInicio a owl:DatatypeProperty ;
+    rdfs:label "dataInicio"@pt ;
+    rdfs:comment "Data de início"@pt ;
+    rdfs:domain :Evento ;
+    rdfs:range xsd:date .
+
+:dataMorte a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataMorte"@pt ;
+    rdfs:comment "Data de morte"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:date .
+
+:dataNascimento a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataNascimento"@pt ;
+    rdfs:comment "Data de nascimento"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:date .
+
+:dataPublicacao a owl:DatatypeProperty ;
+    rdfs:label "dataPublicacao"@pt ;
+    rdfs:comment "Data de publicação"@pt ;
+    rdfs:domain :Publicacao ;
+    rdfs:range xsd:date .
+
+:depois a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "depois"@pt ;
+    rdfs:comment "Indica sucessão temporal"@pt ;
+    rdfs:domain :Temporal ;
+    rdfs:range :Temporal .
+
+:descricao a owl:DatatypeProperty ;
+    rdfs:label "descricao"@pt ;
+    rdfs:comment "Descrição detalhada"@pt ;
+    rdfs:domain :Abstrato ;
+    rdfs:range xsd:string .
+
+:desenvolveu a owl:ObjectProperty ;
+    rdfs:label "desenvolveu"@pt ;
+    rdfs:comment "Indica desenvolvimento de teoria"@pt ;
+    rdfs:domain :Cientista ;
+    rdfs:range :Teoria .
+
+:doi a owl:DatatypeProperty ;
+    rdfs:label "doi"@pt ;
+    rdfs:comment "DOI do artigo"@pt ;
+    rdfs:domain :Artigo ;
+    rdfs:range xsd:string .
+
+:doutoradoEm a owl:ObjectProperty ;
+    rdfs:label "doutoradoEm"@pt ;
+    rdfs:comment "Indica onde obteve doutorado"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :InstituicaoEnsino .
+
+:duracao a owl:DatatypeProperty ;
+    rdfs:label "duracao"@pt ;
+    rdfs:comment "Duração em anos"@pt ;
+    rdfs:domain :Periodo ;
+    rdfs:range xsd:integer .
+
+:durante a owl:ObjectProperty ;
+    rdfs:label "durante"@pt ;
+    rdfs:comment "Indica período do evento"@pt ;
+    rdfs:domain :Evento ;
+    rdfs:range :Periodo .
+
+:email a owl:DatatypeProperty ;
+    rdfs:label "email"@pt ;
+    rdfs:comment "Endereço de email"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:string .
+
+:escreveu a owl:ObjectProperty ;
+    rdfs:label "escreveu"@pt ;
+    rdfs:comment "Indica autoria de documento"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Documento .
+
+:especializadoEm a owl:ObjectProperty ;
+    rdfs:label "especializadoEm"@pt ;
+    rdfs:comment "Indica especialização"@pt ;
+    rdfs:domain :Cientista ;
+    rdfs:range :AreaConhecimento .
+
+:estudouEm a owl:ObjectProperty ;
+    rdfs:label "estudouEm"@pt ;
+    rdfs:comment "Indica onde a pessoa estudou"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :InstituicaoEnsino .
+
+:fundadaEm a owl:ObjectProperty ;
+    rdfs:label "fundadaEm"@pt ;
+    rdfs:comment "Indica onde foi fundada"@pt ;
+    rdfs:domain :Organizacao ;
+    rdfs:range :Cidade .
+
+:graduouSe a owl:ObjectProperty ;
+    rdfs:label "graduouSe"@pt ;
+    rdfs:comment "Indica onde obteve graduação"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :InstituicaoEnsino .
+
+:idade a owl:DatatypeProperty ;
+    rdfs:label "idade"@pt ;
+    rdfs:comment "Idade da pessoa"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:integer .
+
+:identificador a owl:DatatypeProperty ;
+    rdfs:label "identificador"@pt ;
+    rdfs:comment "Identificador único"@pt ;
+    rdfs:domain :Entidade ;
+    rdfs:range xsd:string .
+
+:idioma a owl:DatatypeProperty ;
+    rdfs:label "idioma"@pt ;
+    rdfs:comment "Idioma do documento"@pt ;
+    rdfs:domain :Documento ;
+    rdfs:range xsd:string .
+
+:inventou a owl:ObjectProperty ;
+    rdfs:label "inventou"@pt ;
+    rdfs:comment "Indica invenção de máquina"@pt ;
+    rdfs:domain :Cientista ;
+    rdfs:range :Maquina ;
+    owl:inverseOf :construidaPor .
+
+:isbn a owl:DatatypeProperty ;
+    rdfs:label "isbn"@pt ;
+    rdfs:comment "ISBN do livro"@pt ;
+    rdfs:domain :Publicacao ;
+    rdfs:range xsd:string .
+
+:largura a owl:DatatypeProperty ;
+    rdfs:label "largura"@pt ;
+    rdfs:comment "Largura em metros"@pt ;
+    rdfs:domain :Maquina ;
+    rdfs:range xsd:decimal .
+
+:latitude a owl:DatatypeProperty ;
+    rdfs:label "latitude"@pt ;
+    rdfs:comment "Coordenada latitude"@pt ;
+    rdfs:domain :Lugar ;
+    rdfs:range xsd:decimal .
+
+:localizadaEm a owl:ObjectProperty ;
+    rdfs:label "localizadaEm"@pt ;
+    rdfs:comment "Indica localização da organização"@pt ;
+    rdfs:domain :Organizacao ;
+    rdfs:range :Lugar .
+
+:longitude a owl:DatatypeProperty ;
+    rdfs:label "longitude"@pt ;
+    rdfs:comment "Coordenada longitude"@pt ;
+    rdfs:domain :Lugar ;
+    rdfs:range xsd:decimal .
+
+:mae a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "mae"@pt ;
+    rdfs:comment "Indica relação de maternidade"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Pessoa .
+
+:morreuEm a owl:ObjectProperty ;
+    rdfs:label "morreuEm"@pt ;
+    rdfs:comment "Indica onde a pessoa morreu"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Lugar .
+
+:nacionalidade a owl:DatatypeProperty ;
+    rdfs:label "nacionalidade"@pt ;
+    rdfs:comment "Nacionalidade"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:string .
+
+:nasceuEm a owl:ObjectProperty ;
+    rdfs:label "nasceuEm"@pt ;
+    rdfs:comment "Indica onde a pessoa nasceu"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Lugar .
+
+:nomeArea a owl:DatatypeProperty ;
+    rdfs:label "nomeArea"@pt ;
+    rdfs:comment "Nome da área"@pt ;
+    rdfs:domain :AreaConhecimento ;
+    rdfs:range xsd:string .
+
+:nomeCompleto a owl:DatatypeProperty ;
+    rdfs:label "nomeCompleto"@pt ;
+    rdfs:comment "Nome completo da pessoa"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:string .
+
+:nomeEvento a owl:DatatypeProperty ;
+    rdfs:label "nomeEvento"@pt ;
+    rdfs:comment "Nome do evento"@pt ;
+    rdfs:domain :Evento ;
+    rdfs:range xsd:string .
+
+:nomeLugar a owl:DatatypeProperty ;
+    rdfs:label "nomeLugar"@pt ;
+    rdfs:comment "Nome do lugar"@pt ;
+    rdfs:domain :Lugar ;
+    rdfs:range xsd:string .
+
+:nomeMaquina a owl:DatatypeProperty ;
+    rdfs:label "nomeMaquina"@pt ;
+    rdfs:comment "Nome da máquina"@pt ;
+    rdfs:domain :Maquina ;
+    rdfs:range xsd:string .
+
+:nomeOrganizacao a owl:DatatypeProperty ;
+    rdfs:label "nomeOrganizacao"@pt ;
+    rdfs:comment "Nome da organização"@pt ;
+    rdfs:domain :Organizacao ;
+    rdfs:range xsd:string .
+
+:notasAdicionais a owl:DatatypeProperty ;
+    rdfs:label "notasAdicionais"@pt ;
+    rdfs:comment "Notas e observações"@pt ;
+    rdfs:domain :Entidade ;
+    rdfs:range xsd:string .
+
+:numeroFuncionarios a owl:DatatypeProperty ;
+    rdfs:label "numeroFuncionarios"@pt ;
+    rdfs:comment "Número de funcionários"@pt ;
+    rdfs:domain :Organizacao ;
+    rdfs:range xsd:integer .
+
+:numeroPaginas a owl:DatatypeProperty ;
+    rdfs:label "numeroPaginas"@pt ;
+    rdfs:comment "Número de páginas"@pt ;
+    rdfs:domain :Documento ;
+    rdfs:range xsd:integer .
+
+:numeroParticipantes a owl:DatatypeProperty ;
+    rdfs:label "numeroParticipantes"@pt ;
+    rdfs:comment "Número de participantes"@pt ;
+    rdfs:domain :Evento ;
+    rdfs:range xsd:integer .
+
+:ocorreuEm a owl:ObjectProperty ;
+    rdfs:label "ocorreuEm"@pt ;
+    rdfs:comment "Indica onde ocorreu"@pt ;
+    rdfs:domain :Evento ;
+    rdfs:range :Lugar .
+
+:organizadoPor a owl:ObjectProperty ;
+    rdfs:label "organizadoPor"@pt ;
+    rdfs:comment "Indica organizador"@pt ;
+    rdfs:domain :Evento ;
+    rdfs:range :Organizacao .
+
+:orientou a owl:ObjectProperty ;
+    rdfs:label "orientou"@pt ;
+    rdfs:comment "Indica orientação acadêmica"@pt ;
+    rdfs:domain :Cientista ;
+    rdfs:range :Cientista ;
+    owl:inverseOf :foiOrientadoPor .
+
+:pai a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "pai"@pt ;
+    rdfs:comment "Indica relação de paternidade"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Pessoa ;
+    owl:inverseOf :filho .
+
+:participouDe a owl:ObjectProperty ;
+    rdfs:label "participouDe"@pt ;
+    rdfs:comment "Indica participação em evento"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Evento .
+
+:pertenceA a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "pertenceA"@pt ;
+    rdfs:comment "Indica subordinação organizacional"@pt ;
+    rdfs:domain :Organizacao ;
+    rdfs:range :Organizacao .
+
+:peso a owl:DatatypeProperty ;
+    rdfs:label "peso"@pt ;
+    rdfs:comment "Peso em kg"@pt ;
+    rdfs:domain :Maquina ;
+    rdfs:range xsd:decimal .
+
+:populacao a owl:DatatypeProperty ;
+    rdfs:label "populacao"@pt ;
+    rdfs:comment "População da cidade"@pt ;
+    rdfs:domain :Cidade ;
+    rdfs:range xsd:integer .
+
+:primeiroNome a owl:DatatypeProperty ;
+    rdfs:label "primeiroNome"@pt ;
+    rdfs:comment "Primeiro nome"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:string .
+
+:profissao a owl:DatatypeProperty ;
+    rdfs:label "profissao"@pt ;
+    rdfs:comment "Profissão principal"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:string .
+
+:profundidade a owl:DatatypeProperty ;
+    rdfs:label "profundidade"@pt ;
+    rdfs:comment "Profundidade em metros"@pt ;
+    rdfs:domain :Maquina ;
+    rdfs:range xsd:decimal .
+
+:propôs a owl:ObjectProperty ;
+    rdfs:label "propôs"@pt ;
+    rdfs:comment "Indica proposição de conceito"@pt ;
+    rdfs:domain :Cientista ;
+    rdfs:range :Conceito .
+
+:publicadoEm a owl:ObjectProperty ;
+    rdfs:label "publicadoEm"@pt ;
+    rdfs:comment "Indica período de publicação"@pt ;
+    rdfs:domain :Publicacao ;
+    rdfs:range :Periodo .
+
+:publicou a owl:ObjectProperty ;
+    rdfs:label "publicou"@pt ;
+    rdfs:comment "Indica autoria de publicação"@pt ;
+    rdfs:domain :Cientista ;
+    rdfs:range :Publicacao .
+
+:sobre a owl:ObjectProperty ;
+    rdfs:label "sobre"@pt ;
+    rdfs:comment "Indica assunto do documento"@pt ;
+    rdfs:domain :Documento ;
+    rdfs:range :Abstrato .
+
+:sobrenome a owl:DatatypeProperty ;
+    rdfs:label "sobrenome"@pt ;
+    rdfs:comment "Sobrenome"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:string .
+
+:titulo a owl:DatatypeProperty ;
+    rdfs:label "titulo"@pt ;
+    rdfs:comment "Título do documento"@pt ;
+    rdfs:domain :Documento ;
+    rdfs:range xsd:string .
+
+:trabalhouEm a owl:ObjectProperty ;
+    rdfs:label "trabalhouEm"@pt ;
+    rdfs:comment "Indica onde a pessoa trabalhou"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Organizacao .
+
+:usadaEm a owl:ObjectProperty ;
+    rdfs:label "usadaEm"@pt ;
+    rdfs:comment "Indica onde foi usada"@pt ;
+    rdfs:domain :Maquina ;
+    rdfs:range :Lugar .
+
+:velocidade a owl:DatatypeProperty ;
+    rdfs:label "velocidade"@pt ;
+    rdfs:comment "Velocidade de processamento"@pt ;
+    rdfs:domain :MaquinaComputacional ;
+    rdfs:range xsd:decimal .
+
+:viveuEm a owl:ObjectProperty ;
+    rdfs:label "viveuEm"@pt ;
+    rdfs:comment "Indica onde a pessoa viveu"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Lugar .
+
+:website a owl:DatatypeProperty ;
+    rdfs:label "website"@pt ;
+    rdfs:comment "Website oficial"@pt ;
+    rdfs:domain :Organizacao ;
+    rdfs:range xsd:anyURI .
+
+:ArtigoComputingMachinery a :Artigo ;
+    rdfs:label "Computing Machinery and Intelligence"@pt ;
+    :dataPublicacao "1950-10-01"^^xsd:date ;
+    :idioma "Inglês" ;
+    :titulo "Computing Machinery and Intelligence" .
+
+:Bombe a :DispositivoCriptografico ;
+    rdfs:label "Bombe"@pt ;
+    :altura 2.1 ;
+    :anoConstrucao "1939"^^xsd:gYear ;
+    :nomeMaquina "Bombe Eletromecânica" ;
+    :peso 1000.0 ;
+    :usadaEm :BletchleyPark .
+
+:Cambridge a :Cidade ;
+    rdfs:label "Cambridge"@pt ;
+    :localizadaEm :ReinoUnido ;
+    :nomeLugar "Cambridge" .
+
+:CienciaComputacao a :AreaConhecimento ;
+    rdfs:label "Ciência da Computação"@pt ;
+    :nomeArea "Ciência da Computação" .
+
+:CientistaDaComputacao a owl:Class ;
+    rdfs:label "Cientista da Computação"@pt ;
+    rdfs:comment "Cientista especializado em computação"@pt ;
+    rdfs:subClassOf :Cientista .
+
+:Criptografia a :AreaConhecimento ;
+    rdfs:label "Criptografia"@pt ;
+    :nomeArea "Criptografia" .
+
+:Criptografo a owl:Class ;
+    rdfs:label "Criptógrafo"@pt ;
+    rdfs:comment "Especialista em criptografia"@pt ;
+    rdfs:subClassOf :Cientista .
+
+:Edificio a owl:Class ;
+    rdfs:label "Edifício"@pt ;
+    rdfs:comment "Construção física"@pt ;
+    rdfs:subClassOf :Lugar .
+
+:EventoHistorico a owl:Class ;
+    rdfs:label "Evento Histórico"@pt ;
+    rdfs:comment "Acontecimento de importância histórica"@pt ;
+    rdfs:subClassOf :Evento .
+
+:GCCS a :OrganizacaoMilitar ;
+    rdfs:label "Government Code and Cypher School"@pt ;
+    :nomeOrganizacao "Government Code and Cypher School" ;
+    :pertenceA :ReinoUnido .
+
+:InteligenciaArtificial a :AreaConhecimento ;
+    rdfs:label "Inteligência Artificial"@pt ;
+    :nomeArea "Inteligência Artificial" .
+
+:Londres a :Cidade ;
+    rdfs:label "Londres"@pt ;
+    :latitude 51.5074 ;
+    :localizadaEm :ReinoUnido ;
+    :longitude -0.1278 ;
+    :nomeLugar "Londres" .
+
+:MaquinaTuring a :MaquinaComputacional ;
+    rdfs:label "Máquina de Turing"@pt ;
+    :anoConstrucao "1936"^^xsd:gYear ;
+    :baseadaEm :TeoriaComputabilidade ;
+    :nomeMaquina "Máquina de Turing" .
+
+:OrganizacaoMilitar a owl:Class ;
+    rdfs:label "Organização Militar"@pt ;
+    rdfs:comment "Organização das forças armadas"@pt ;
+    rdfs:subClassOf :Organizacao .
+
+:Pais a owl:Class ;
+    rdfs:label "País"@pt ;
+    rdfs:comment "Unidade política soberana"@pt ;
+    rdfs:subClassOf :Lugar .
+
+:SegundaGuerraMundial a :EventoHistorico ;
+    rdfs:label "Segunda Guerra Mundial"@pt ;
+    :dataFim "1945-09-02"^^xsd:date ;
+    :dataInicio "1939-09-01"^^xsd:date ;
+    :nomeEvento "Segunda Guerra Mundial" ;
+    :ocorreuEm :ReinoUnido .
+
+:TesteTuring a :Conceito ;
+    rdfs:label "Teste de Turing"@pt ;
+    :descricao "Teste para determinar se uma máquina pode exibir comportamento inteligente" .
+
+:UniversidadeCambridge a :Universidade ;
+    rdfs:label "Universidade de Cambridge"@pt ;
+    :dataFundacao "1209-01-01"^^xsd:date ;
+    :localizadaEm :Cambridge ;
+    :nomeOrganizacao "University of Cambridge" .
+
+:UniversidadePrinceton a :Universidade ;
+    rdfs:label "Universidade de Princeton"@pt ;
+    :nomeOrganizacao "Princeton University" .
+
+:construidaPor a owl:ObjectProperty ;
+    rdfs:label "construidaPor"@pt ;
+    rdfs:comment "Indica quem construiu"@pt ;
+    rdfs:domain :Maquina ;
+    rdfs:range :Pessoa .
+
+:filho a owl:ObjectProperty ;
+    rdfs:label "filho"@pt ;
+    rdfs:comment "Indica relação de filiação"@pt ;
+    rdfs:domain :Pessoa ;
+    rdfs:range :Pessoa .
+
+:foiOrientadoPor a owl:ObjectProperty ;
+    rdfs:label "foiOrientadoPor"@pt ;
+    rdfs:comment "Indica quem foi o orientador"@pt ;
+    rdfs:domain :Cientista ;
+    rdfs:range :Cientista .
+
+:Agente a owl:Class ;
+    rdfs:label "Agente"@pt ;
+    rdfs:comment "Entidades que podem agir e tomar decisões"@pt ;
+    rdfs:subClassOf :Entidade .
+
+:Artigo a owl:Class ;
+    rdfs:label "Artigo"@pt ;
+    rdfs:comment "Texto científico ou jornalístico"@pt ;
+    rdfs:subClassOf :Documento .
+
+:BletchleyPark a :Edificio ;
+    rdfs:label "Bletchley Park"@pt ;
+    :localizadaEm :ReinoUnido ;
+    :nomeLugar "Bletchley Park" .
+
+:Conceito a owl:Class ;
+    rdfs:label "Conceito"@pt ;
+    rdfs:comment "Ideia ou noção abstrata"@pt ;
+    rdfs:subClassOf :Abstrato .
+
+:DispositivoCriptografico a owl:Class ;
+    rdfs:label "Dispositivo Criptográfico"@pt ;
+    rdfs:comment "Máquina para cifrar/decifrar mensagens"@pt ;
+    rdfs:subClassOf :Maquina .
+
+:MaquinaComputacional a owl:Class ;
+    rdfs:label "Máquina Computacional"@pt ;
+    rdfs:comment "Máquina capaz de realizar computações"@pt ;
+    rdfs:subClassOf :Maquina .
+
+:Objeto a owl:Class ;
+    rdfs:label "Objeto"@pt ;
+    rdfs:comment "Objetos físicos e artefatos"@pt ;
+    rdfs:subClassOf :Entidade .
+
+:TeoriaComputabilidade a :Teoria ;
+    rdfs:label "Teoria da Computabilidade"@pt ;
+    :descricao "Teoria sobre o que pode ser computado" .
+
+:Universidade a owl:Class ;
+    rdfs:label "Universidade"@pt ;
+    rdfs:comment "Instituição de ensino superior"@pt ;
+    rdfs:subClassOf :InstituicaoEnsino .
+
+:Matematico a owl:Class ;
+    rdfs:label "Matemático"@pt ;
+    rdfs:comment "Cientista especializado em matemática"@pt ;
+    rdfs:subClassOf :Cientista .
+
+:Teoria a owl:Class ;
+    rdfs:label "Teoria"@pt ;
+    rdfs:comment "Sistema de ideias que explica fenômenos"@pt ;
+    rdfs:subClassOf :Abstrato .
+
+:Cidade a owl:Class ;
+    rdfs:label "Cidade"@pt ;
+    rdfs:comment "Área urbana habitada"@pt ;
+    rdfs:subClassOf :Lugar .
+
+:Publicacao a owl:Class ;
+    rdfs:label "Publicação"@pt ;
+    rdfs:comment "Documento publicado"@pt ;
+    rdfs:subClassOf :Documento .
+
+:Abstrato a owl:Class ;
+    rdfs:label "Abstrato"@pt ;
+    rdfs:comment "Conceitos e entidades abstratas"@pt ;
+    rdfs:subClassOf :Entidade .
+
+:InstituicaoEnsino a owl:Class ;
+    rdfs:label "Instituição de Ensino"@pt ;
+    rdfs:comment "Organização educacional"@pt ;
+    rdfs:subClassOf :Organizacao .
+
+:Periodo a owl:Class ;
+    rdfs:label "Período"@pt ;
+    rdfs:comment "Intervalo de tempo"@pt ;
+    rdfs:subClassOf :Temporal .
+
+:AreaConhecimento a owl:Class ;
+    rdfs:label "Área de Conhecimento"@pt ;
+    rdfs:comment "Domínio específico do saber"@pt ;
+    rdfs:subClassOf :Abstrato .
+
+:ReinoUnido a :Pais ;
+    rdfs:label "Reino Unido"@pt ;
+    :nomeLugar "Reino Unido da Grã-Bretanha e Irlanda do Norte" .
+
+:Temporal a owl:Class ;
+    rdfs:label "Temporal"@pt ;
+    rdfs:comment "Entidades relacionadas ao tempo"@pt ;
+    rdfs:subClassOf :Entidade .
+
+:Documento a owl:Class ;
+    rdfs:label "Documento"@pt ;
+    rdfs:comment "Registro de informação"@pt ;
+    rdfs:subClassOf :Objeto .
+
+:Entidade a owl:Class ;
+    rdfs:label "Entidade"@pt ;
+    rdfs:comment "Classe raiz que representa qualquer entidade no domínio"@pt .
+
+:Evento a owl:Class ;
+    rdfs:label "Evento"@pt ;
+    rdfs:comment "Acontecimento específico no tempo"@pt ;
+    rdfs:subClassOf :Temporal .
+
+:Maquina a owl:Class ;
+    rdfs:label "Máquina"@pt ;
+    rdfs:comment "Dispositivo mecânico ou eletrônico"@pt ;
+    rdfs:subClassOf :Objeto .
+
+:Organizacao a owl:Class ;
+    rdfs:label "Organização"@pt ;
+    rdfs:comment "Grupo organizado de pessoas com objetivo comum"@pt ;
+    rdfs:subClassOf :Agente .
+
+:Cientista a owl:Class ;
+    rdfs:label "Cientista"@pt ;
+    rdfs:comment "Pessoa dedicada à ciência"@pt ;
+    rdfs:subClassOf :Pessoa .
+
+:Lugar a owl:Class ;
+    rdfs:label "Lugar"@pt ;
+    rdfs:comment "Localizações geográficas e espaços físicos"@pt ;
+    rdfs:subClassOf :Entidade .
+
+:Pessoa a owl:Class ;
+    rdfs:label "Pessoa"@pt ;
+    rdfs:comment "Indivíduo humano"@pt ;
+    rdfs:subClassOf :Agente .
+

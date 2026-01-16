@@ -1,0 +1,280 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "AlanTuring",
+      "tipo": "Matematico",
+      "a": "Matematico",
+      "label": "Alan Mathison Turing",
+      "biografia": "Pai da computação moderna e herói da Segunda Guerra Mundial",
+      "dataMorte": "1954-06-07",
+      "dataNascimento": "1912-06-23",
+      "nacionalidade": "Britânico",
+      "nomeCompleto": "Alan Mathison Turing",
+      "primeiroNome": "Alan",
+      "profissao": "Cientista da Computação\"",
+      "sobrenome": "Turing"
+    },
+    {
+      "id": "Enigma",
+      "tipo": "DispositivoCriptografico",
+      "a": "DispositivoCriptografico",
+      "label": "Enigma",
+      "nomeMaquina": "Máquina Enigma"
+    },
+    {
+      "id": "ArtigoComputingMachinery",
+      "tipo": "Artigo",
+      "a": "Artigo",
+      "label": "Computing Machinery and Intelligence",
+      "dataPublicacao": "1950-10-01",
+      "idioma": "Inglês",
+      "titulo": "Computing Machinery and Intelligence"
+    },
+    {
+      "id": "Bombe",
+      "tipo": "DispositivoCriptografico",
+      "a": "DispositivoCriptografico",
+      "label": "Bombe",
+      "altura": "2.1",
+      "anoConstrucao": "1939",
+      "nomeMaquina": "Bombe Eletromecânica",
+      "peso": "1000.0"
+    },
+    {
+      "id": "Cambridge",
+      "tipo": "Cidade",
+      "a": "Cidade",
+      "label": "Cambridge"
+    },
+    {
+      "id": "CienciaComputacao",
+      "tipo": "AreaConhecimento",
+      "a": "AreaConhecimento",
+      "label": "Ciência da Computação",
+      "nomeArea": "Ciência da Computação"
+    },
+    {
+      "id": "Criptografia",
+      "tipo": "AreaConhecimento",
+      "a": "AreaConhecimento",
+      "label": "Criptografia"
+    },
+    {
+      "id": "GCCS",
+      "tipo": "OrganizacaoMilitar",
+      "a": "OrganizacaoMilitar",
+      "label": "Government Code and Cypher School",
+      "nomeOrganizacao": "Government Code and Cypher School"
+    },
+    {
+      "id": "InteligenciaArtificial",
+      "tipo": "AreaConhecimento",
+      "a": "AreaConhecimento",
+      "label": "Inteligência Artificial",
+      "nomeArea": "Inteligência Artificial"
+    },
+    {
+      "id": "Londres",
+      "tipo": "Cidade",
+      "a": "Cidade",
+      "label": "Londres",
+      "latitude": "51.5074",
+      "longitude": "-0.1278"
+    },
+    {
+      "id": "MaquinaTuring",
+      "tipo": "MaquinaComputacional",
+      "a": "MaquinaComputacional",
+      "label": "Máquina de Turing",
+      "anoConstrucao": "1936",
+      "nomeMaquina": "Máquina de Turing"
+    },
+    {
+      "id": "SegundaGuerraMundial",
+      "tipo": "EventoHistorico",
+      "a": "EventoHistorico",
+      "label": "Segunda Guerra Mundial",
+      "dataFim": "1945-09-02",
+      "dataInicio": "1939-09-01",
+      "nomeEvento": "Segunda Guerra Mundial"
+    },
+    {
+      "id": "TesteTuring",
+      "tipo": "Conceito",
+      "a": "Conceito",
+      "label": "Teste de Turing",
+      "descricao": "Teste para determinar se uma máquina pode exibir comportamento inteligente"
+    },
+    {
+      "id": "UniversidadeCambridge",
+      "tipo": "Universidade",
+      "a": "Universidade",
+      "label": "Universidade de Cambridge",
+      "dataFundacao": "1209-01-01",
+      "nomeOrganizacao": "University of Cambridge"
+    },
+    {
+      "id": "UniversidadePrinceton",
+      "tipo": "Universidade",
+      "a": "Universidade",
+      "label": "Universidade de Princeton",
+      "nomeOrganizacao": "Princeton University"
+    },
+    {
+      "id": "BletchleyPark",
+      "tipo": "Edificio",
+      "a": "Edificio",
+      "label": "Bletchley Park",
+      "nomeLugar": "Bletchley Park"
+    },
+    {
+      "id": "TeoriaComputabilidade",
+      "tipo": "Teoria",
+      "a": "Teoria",
+      "label": "Teoria da Computabilidade",
+      "descricao": "Teoria sobre o que pode ser computado"
+    },
+    {
+      "id": "ReinoUnido",
+      "tipo": "Pais",
+      "a": "Pais",
+      "label": "Reino Unido",
+      "nomeLugar": "Reino Unido da Grã-Bretanha e Irlanda do Norte"
+    }
+  ],
+  "edges": [
+    {
+      "relacao": "contribuiuPara",
+      "source": "AlanTuring",
+      "target": "InteligenciaArtificial"
+    },
+    {
+      "relacao": "desenvolveu",
+      "source": "AlanTuring",
+      "target": "TeoriaComputabilidade"
+    },
+    {
+      "relacao": "doutoradoEm",
+      "source": "AlanTuring",
+      "target": "UniversidadePrinceton"
+    },
+    {
+      "relacao": "especializadoEm",
+      "source": "AlanTuring",
+      "target": "CienciaComputacao"
+    },
+    {
+      "relacao": "especializadoEm",
+      "source": "AlanTuring",
+      "target": "Criptografia"
+    },
+    {
+      "relacao": "estudouEm",
+      "source": "AlanTuring",
+      "target": "UniversidadeCambridge"
+    },
+    {
+      "relacao": "inventou",
+      "source": "AlanTuring",
+      "target": "Bombe"
+    },
+    {
+      "relacao": "inventou",
+      "source": "AlanTuring",
+      "target": "MaquinaTuring"
+    },
+    {
+      "relacao": "morreuEm",
+      "source": "AlanTuring",
+      "target": "ReinoUnido"
+    },
+    {
+      "relacao": "nasceuEm",
+      "source": "AlanTuring",
+      "target": "Londres"
+    },
+    {
+      "relacao": "participouDe",
+      "source": "AlanTuring",
+      "target": "SegundaGuerraMundial"
+    },
+    {
+      "relacao": "propôs",
+      "source": "AlanTuring",
+      "target": "TesteTuring"
+    },
+    {
+      "relacao": "publicou",
+      "source": "AlanTuring",
+      "target": "ArtigoComputingMachinery"
+    },
+    {
+      "relacao": "trabalhouEm",
+      "source": "AlanTuring",
+      "target": "BletchleyPark"
+    },
+    {
+      "relacao": "trabalhouEm",
+      "source": "AlanTuring",
+      "target": "GCCS"
+    },
+    {
+      "relacao": "usadaEm",
+      "source": "Bombe",
+      "target": "BletchleyPark"
+    },
+    {
+      "relacao": "localizadaEm",
+      "source": "Cambridge",
+      "target": "ReinoUnido"
+    },
+    {
+      "relacao": "nomeLugar",
+      "source": "Cambridge",
+      "target": "Cambridge"
+    },
+    {
+      "relacao": "nomeArea",
+      "source": "Criptografia",
+      "target": "Criptografia"
+    },
+    {
+      "relacao": "pertenceA",
+      "source": "GCCS",
+      "target": "ReinoUnido"
+    },
+    {
+      "relacao": "localizadaEm",
+      "source": "Londres",
+      "target": "ReinoUnido"
+    },
+    {
+      "relacao": "nomeLugar",
+      "source": "Londres",
+      "target": "Londres"
+    },
+    {
+      "relacao": "baseadaEm",
+      "source": "MaquinaTuring",
+      "target": "TeoriaComputabilidade"
+    },
+    {
+      "relacao": "ocorreuEm",
+      "source": "SegundaGuerraMundial",
+      "target": "ReinoUnido"
+    },
+    {
+      "relacao": "localizadaEm",
+      "source": "UniversidadeCambridge",
+      "target": "Cambridge"
+    },
+    {
+      "relacao": "localizadaEm",
+      "source": "BletchleyPark",
+      "target": "ReinoUnido"
+    }
+  ]
+}

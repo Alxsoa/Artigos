@@ -1,0 +1,434 @@
+@prefix : <http://example.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Alan_Mathison_Turing a :Pessoa ;
+    rdfs:label "Alan Mathison Turing"@pt .
+
+:Arthur_Scherbius a :Pessoa ;
+    rdfs:label "Arthur Scherbius"@pt ;
+    :desenvolveu :Enigma .
+
+:Biologia_Matemática a :Conceito ;
+    rdfs:label "Biologia Matemática"@pt .
+
+:Bomba_Eletromecânica a :Máquina ;
+    rdfs:label "Bomba Eletromecânica"@pt .
+
+:Calculadora a :Máquina ;
+    rdfs:label "Calculadora"@pt .
+
+:Cambridge a :Lugar ;
+    rdfs:label "Cambridge"@pt .
+
+:Chave_Criptográfica a :Conceito ;
+    rdfs:label "Chave Criptográfica"@pt .
+
+:Christopher_Morcom a :Pessoa ;
+    rdfs:label "Christopher Morcom"@pt ;
+    :conhecido_em :Sherborne_School ;
+    :faleceu_em :Entidade .
+
+:Computador a :Máquina ;
+    rdfs:label "Computador"@pt .
+
+:Criptoanálise a :Conceito ;
+    rdfs:label "Criptoanálise"@pt .
+
+:Criptografia a :Conceito ;
+    rdfs:label "Criptografia"@pt .
+
+:Código a :Conceito ;
+    rdfs:label "Código"@pt .
+
+:Departamento_de_Criptografia a :Departamento ;
+    rdfs:label "Departamento de Criptografia"@pt .
+
+:Departamento_de_Inteligência_Britânico a :Departamento ;
+    rdfs:label "Departamento de Inteligência Britânico"@pt .
+
+:Europa a :Lugar ;
+    rdfs:label "Europa"@pt .
+
+:Exército_Britânico a :Organização ;
+    rdfs:label "Exército Britânico"@pt .
+
+:Forças_Armadas_Nazistas a :Organização ;
+    rdfs:label "Forças Armadas Nazistas"@pt .
+
+:França a :País ;
+    rdfs:label "França"@pt ;
+    :forneceu :chaves_criptográficas .
+
+:Governo_Britânico a :Organização ;
+    rdfs:label "Governo Britânico"@pt .
+
+:Greve_Geral_na_Grã-Bretanha a :Evento ;
+    rdfs:label "Greve Geral na Grã-Bretanha"@pt .
+
+:Grã-Bretanha a :Lugar ;
+    rdfs:label "Grã-Bretanha"@pt .
+
+:Grécia a :Lugar ;
+    rdfs:label "Grécia"@pt .
+
+:Harold_Keen a :Pessoa ;
+    rdfs:label "Harold Keen"@pt ;
+    :executou :Bombe .
+
+:Inteligência_Artificial a :Conceito ;
+    rdfs:label "Inteligência Artificial"@pt .
+
+:Josef_Stalin a :Pessoa ;
+    rdfs:label "Josef Stalin"@pt .
+
+:Kings_College a :Instituição_de_Ensino ;
+    rdfs:label "King's College"@pt .
+
+:Max_Hastings a :Pessoa ;
+    rdfs:label "Max Hastings"@pt .
+
+:Mensagem_Criptografada a :Conceito ;
+    rdfs:label "Mensagem Criptografada"@pt .
+
+:Normandia a :Lugar ;
+    rdfs:label "Normandia"@pt .
+
+:Princeton a :Lugar ;
+    rdfs:label "Princeton"@pt .
+
+:Reino_Unido a :Lugar ;
+    rdfs:label "Reino Unido"@pt .
+
+:The_Bombe a :Máquina ;
+    rdfs:label "The Bombe"@pt .
+
+:Ultra a :Conceito,
+        :Departamento ;
+    rdfs:label "Ultra"@pt ;
+    :contava_com :seis_mil_trabalhadores ;
+    :departamento_de :inteligência_britânica .
+
+:União_Soviética a :País ;
+    rdfs:label "União Soviética"@pt .
+
+:Victory a :Máquina ;
+    rdfs:label "Victory"@pt ;
+    :primeira_bomba :Bombe ;
+    :pronta_em :março_de_1940 .
+
+:Wehrmacht a :Organização ;
+    rdfs:label "Wehrmacht"@pt .
+
+:Winston_Churchill a :Pessoa ;
+    rdfs:label "Winston Churchill"@pt ;
+    :reconheceu :Alan_Turing .
+
+:altura a owl:ObjectProperty ;
+    rdfs:label "altura"@pt .
+
+:base_para a owl:ObjectProperty ;
+    rdfs:label "base_para"@pt .
+
+:configuração_trocada a owl:ObjectProperty ;
+    rdfs:label "configuração_trocada"@pt .
+
+:conhecido_como a owl:ObjectProperty ;
+    rdfs:label "conhecido_como"@pt .
+
+:conhecido_em a owl:ObjectProperty ;
+    rdfs:label "conhecido_em"@pt .
+
+:construiu a owl:ObjectProperty ;
+    rdfs:label "construiu"@pt .
+
+:contava_com a owl:ObjectProperty ;
+    rdfs:label "contava_com"@pt .
+
+:contribuiu_com a owl:ObjectProperty ;
+    rdfs:label "contribuiu_com"@pt .
+
+:contribuiu_para a owl:ObjectProperty ;
+    rdfs:label "contribuiu_para"@pt .
+
+:criada_em a owl:ObjectProperty ;
+    rdfs:label "criada_em"@pt .
+
+:decifrou a owl:ObjectProperty ;
+    rdfs:label "decifrou"@pt .
+
+:departamento_de a owl:ObjectProperty ;
+    rdfs:label "departamento_de"@pt .
+
+:desenvolveu a owl:ObjectProperty ;
+    rdfs:label "desenvolveu"@pt .
+
+:desenvolvida_por a owl:ObjectProperty ;
+    rdfs:label "desenvolvida_por"@pt .
+
+:desenvolvido_por a owl:ObjectProperty ;
+    rdfs:label "desenvolvido_por"@pt .
+
+:envolvidos a owl:ObjectProperty ;
+    rdfs:label "envolvidos"@pt .
+
+:estudou_em a owl:ObjectProperty ;
+    rdfs:label "estudou_em"@pt .
+
+:executou a owl:ObjectProperty ;
+    rdfs:label "executou"@pt .
+
+:faleceu_em a owl:ObjectProperty ;
+    rdfs:label "faleceu_em"@pt .
+
+:filha_de a owl:ObjectProperty ;
+    rdfs:label "filha_de"@pt .
+
+:formado_por a owl:ObjectProperty ;
+    rdfs:label "formado_por"@pt .
+
+:forneceu a owl:ObjectProperty ;
+    rdfs:label "forneceu"@pt .
+
+:graduou-se_em a owl:ObjectProperty ;
+    rdfs:label "graduou-se_em"@pt .
+
+:inspirou-se_em a owl:ObjectProperty ;
+    rdfs:label "inspirou-se_em"@pt .
+
+:localizado_em a owl:ObjectProperty ;
+    rdfs:label "localizado_em"@pt .
+
+:morreu_no_ano a owl:ObjectProperty ;
+    rdfs:label "morreu_no_ano"@pt .
+
+:mãe a owl:ObjectProperty ;
+    rdfs:label "mãe"@pt .
+
+:nacionalidade a owl:ObjectProperty ;
+    rdfs:label "nacionalidade"@pt .
+
+:nasceu_em a owl:ObjectProperty ;
+    rdfs:label "nasceu_em"@pt .
+
+:nasceu_no_ano a owl:ObjectProperty ;
+    rdfs:label "nasceu_no_ano"@pt .
+
+:obteve_PhD_em a owl:ObjectProperty ;
+    rdfs:label "obteve_PhD_em"@pt .
+
+:ocorreu_entre a owl:ObjectProperty ;
+    rdfs:label "ocorreu_entre"@pt .
+
+:pai a owl:ObjectProperty ;
+    rdfs:label "pai"@pt .
+
+:pesava a owl:ObjectProperty ;
+    rdfs:label "pesava"@pt .
+
+:primeira_bomba a owl:ObjectProperty ;
+    rdfs:label "primeira_bomba"@pt .
+
+:pronta_em a owl:ObjectProperty ;
+    rdfs:label "pronta_em"@pt .
+
+:reconheceu a owl:ObjectProperty ;
+    rdfs:label "reconheceu"@pt .
+
+:recrutou a owl:ObjectProperty ;
+    rdfs:label "recrutou"@pt .
+
+:trabalhou_com a owl:ObjectProperty ;
+    rdfs:label "trabalhou_com"@pt .
+
+:trabalhou_em a owl:ObjectProperty ;
+    rdfs:label "trabalhou_em"@pt .
+
+:usada_para a owl:ObjectProperty ;
+    rdfs:label "usada_para"@pt .
+
+:usada_por a owl:ObjectProperty ;
+    rdfs:label "usada_por"@pt .
+
+:usado_para a owl:ObjectProperty ;
+    rdfs:label "usado_para"@pt .
+
+:África a :Lugar ;
+    rdfs:label "África"@pt .
+
+:Índia a :Lugar ;
+    rdfs:label "Índia"@pt .
+
+:Alemanha a :País ;
+    rdfs:label "Alemanha"@pt .
+
+:Aliados a :Organização ;
+    rdfs:label "Aliados"@pt .
+
+:Bletchley_Park a :Lugar ;
+    rdfs:label "Bletchley Park"@pt ;
+    :conhecido_como :Station_X ;
+    :localizado_em :Inglaterra .
+
+:Colossus a :Máquina ;
+    rdfs:label "Colossus"@pt ;
+    :decifrou :Lorenz .
+
+:Eixo a :Organização ;
+    rdfs:label "Eixo"@pt ;
+    :formado_por :Alemanha,
+        :Itália,
+        :Japão .
+
+:Enigma a :Máquina ;
+    rdfs:label "Enigma"@pt ;
+    :configuração_trocada :diariamente ;
+    :usada_por :Exército_Alemão .
+
+:Ethel_Sara_Stoney a :Pessoa ;
+    rdfs:label "Ethel Sara Stoney"@pt ;
+    :filha_de :engenheiro-chefe .
+
+:Exército_Alemão a :Organização ;
+    rdfs:label "Exército Alemão"@pt .
+
+:Gordon_Welchman a :Pessoa ;
+    rdfs:label "Gordon Welchman"@pt .
+
+:Government_Code_and_Cypher_School a :Organização ;
+    rdfs:label "Government Code and Cypher School"@pt .
+
+:Guerra a owl:Class ;
+    rdfs:label "Guerra"@pt .
+
+:Hazelhurst_Preparatory_School a :Instituição_de_Ensino ;
+    rdfs:label "Hazelhurst Preparatory School"@pt .
+
+:Inglaterra a :Lugar ;
+    rdfs:label "Inglaterra"@pt .
+
+:Itália a :País ;
+    rdfs:label "Itália"@pt .
+
+:Japão a :País ;
+    rdfs:label "Japão"@pt .
+
+:Julius_Mathison_Turing a :Pessoa ;
+    rdfs:label "Julius Mathison Turing"@pt ;
+    :trabalhou_em :Madras_Presidency .
+
+:Londres a :Lugar ;
+    rdfs:label "Londres"@pt .
+
+:Lorenz a :Máquina ;
+    rdfs:label "Lorenz"@pt .
+
+:Madras_Presidency a :Lugar ;
+    rdfs:label "Madras Presidency"@pt .
+
+:Marian_Rejewski a :Pessoa ;
+    rdfs:label "Marian Rejewski"@pt ;
+    :nacionalidade :Polônia .
+
+:Máquina_de_Turing a :Máquina ;
+    rdfs:label "Máquina de Turing"@pt ;
+    :base_para :computadores_modernos ;
+    :criada_em :Entidade .
+
+:Paddington a :Lugar ;
+    rdfs:label "Paddington"@pt .
+
+:Polônia a :País ;
+    rdfs:label "Polônia"@pt ;
+    :contribuiu_com :matemáticos ;
+    :forneceu :máquinas_Enigma .
+
+:Segunda_Guerra_Mundial a :Evento,
+        :Guerra ;
+    rdfs:label "Segunda Guerra Mundial"@pt ;
+    :envolvidos :Aliados,
+        :Eixo ;
+    :ocorreu_entre <http://example.org/ontology#-1945> .
+
+:Teste a owl:Class ;
+    rdfs:label "Teste"@pt .
+
+:Teste_de_Turing a :Conceito,
+        :Teste ;
+    rdfs:label "Teste de Turing"@pt ;
+    :desenvolvido_por :Alan_Turing ;
+    :usado_para :distinguir_IA_de_humana .
+
+:Tommy_Flowers a :Pessoa ;
+    rdfs:label "Tommy Flowers"@pt ;
+    :construiu :Colossus .
+
+:Universidade_de_Cambridge a :Instituição_de_Ensino ;
+    rdfs:label "Universidade de Cambridge"@pt .
+
+:Universidade_de_Princeton a :Instituição_de_Ensino ;
+    rdfs:label "Universidade de Princeton"@pt .
+
+:Evento a owl:Class ;
+    rdfs:label "Evento"@pt .
+
+:Sherborne_School a :Instituição_de_Ensino ;
+    rdfs:label "Sherborne School"@pt .
+
+:Station_X a :Lugar ;
+    rdfs:label "Station X"@pt .
+
+:Alan_Turing a :Pessoa ;
+    rdfs:label "Alan Turing"@pt ;
+    :contribuiu_para :Segunda_Guerra_Mundial ;
+    :desenvolveu :Bombe,
+        :Máquina_de_Turing,
+        :Teste_de_Turing ;
+    :estudou_em :Hazelhurst_Preparatory_School,
+        :Sherborne_School ;
+    :graduou-se_em :Universidade_de_Cambridge ;
+    :inspirou-se_em :Marian_Rejewski ;
+    :morreu_no_ano :Entidade ;
+    :mãe :Ethel_Sara_Stoney ;
+    :nasceu_em :Londres,
+        :Paddington ;
+    :nasceu_no_ano :Entidade ;
+    :obteve_PhD_em :Universidade_de_Princeton ;
+    :pai :Julius_Mathison_Turing ;
+    :recrutou :Tommy_Flowers ;
+    :trabalhou_com :Gordon_Welchman ;
+    :trabalhou_em :Bletchley_Park,
+        :Government_Code_and_Cypher_School,
+        :Station_X .
+
+:Bombe a :Máquina ;
+    rdfs:label "Bombe"@pt ;
+    :altura :m ;
+    :desenvolvida_por :Alan_Turing ;
+    :pesava :quase_uma_tonelada ;
+    :usada_para :decifrar_mensagens .
+
+:Departamento a owl:Class ;
+    rdfs:label "Departamento"@pt .
+
+:Instituição_de_Ensino a owl:Class ;
+    rdfs:label "Instituição de Ensino"@pt .
+
+:País a owl:Class ;
+    rdfs:label "País"@pt .
+
+:Organização a owl:Class ;
+    rdfs:label "Organização"@pt .
+
+:Conceito a owl:Class ;
+    rdfs:label "Conceito"@pt .
+
+:Máquina a owl:Class ;
+    rdfs:label "Máquina"@pt .
+
+:Pessoa a owl:Class ;
+    rdfs:label "Pessoa"@pt .
+
+:Lugar a owl:Class ;
+    rdfs:label "Lugar"@pt .
+
